@@ -1,5 +1,95 @@
+<!doctype html>
 <html>
-<body>
-<h1>Hello World</h1>
-</body>
+    <head>
+        <title>Honeywell Merry Christmas Game</title>
+
+        <!-- Version: 1.0.0 -->
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+        <!-- Facebook OG meta tags -->
+        <meta property="og:url" content="http://www.your-domain.com/your-page.html" />
+	    <meta property="og:type" content="website" />
+	    <meta property="og:title" content="Honeywell Merry Christmas Game" />
+	    <meta property="og:description" content="We wish you happy holidays!" />
+	    <meta property="og:image" content="http://www.your-domain.com/path/image.jpg" />
+
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="styles.css">
+        <script src="index.min.js"></script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-89088904-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+    </head>
+
+    <body>
+        <div class="bell" id="bell"></div>
+        <div class="corner" id="corner"></div>
+        <div class="backdrop backdrop-visible backdrop-white" id="backdrop">
+            <div class="hw-logo" id="hwLogo"></div>
+            <div class="modal-content" id="endModal">
+                <h1 class="modal-content-header">
+                    <span id="endModalScore">0</span>&nbsp;gifts!
+                </h1>
+                <p class="modal-content-text">
+                    Ho-ho-ho!<br>Merry Christmas full of fun.
+                </p>
+                <div class="modal-button-group">
+                    <span class="button" id="shareToFacebook"></span>
+                    <span class="button" id="sendToFriendBtn"></span>
+                    <span class="button" id="restartGameBtn"></span>
+                </div>
+            </div>
+            <div class="modal-content modal-visible modal-invisible" id="startModal">
+                <h1 class="modal-content-header">Catch as many falling presents<br>as you can with the chimney.</h1>
+                <p class="modal-content-text">Slide the house from left to right<br>using your mouse or finger.</p>
+                <div class="modal-button-group">
+                    <span class="button" id="startGameBtn"></span>
+                </div>
+            </div>
+            <div class="modal-content" id="sendToFriendModal">
+                <form action="" class="friend-form">
+                    <input type="text" class="input" id="sendToEmail" placeholder="Email to">
+                    <textarea name="messageBody" class="input" id="messageBody" cols="30" rows="10" placeholder="Message"></textarea>
+                    <div class="mail-modal-button-group">
+                        <span class="button" id="cancelMail"></span>
+                        <span class="button" id="sendMail"></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="game-container" id="game">
+            <div class="santa-road">
+                <span class="santa" id="santa">
+                    <span class="santa-smoke"></span>
+                </span>
+            </div>
+            <div class="clouds">
+                <span class="cloud cloud-bottom"></span>
+                <span class="cloud clout-top"></span>
+                <span class="cloud cloud-bottom"></span>
+            </div>
+            <div class="ground">
+                <span class="house" id="house"></span>
+            </div>
+            <span class="divider" id="divider"></span>
+            <div class="bottom-stats">
+                <span class="score">
+                    <span class="label">Score:&nbsp;</span>
+                    <span class="value" id="score">0</span>
+                </span>
+                <span class="time">
+                    <span class="label">Time:&nbsp;</span>
+                    <span class="value" id="time">30</span>
+                </span>
+            </div>
+        </div>
+    </body>
 </html>
