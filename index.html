@@ -3,7 +3,7 @@
     <head>
         <title>Honeywell Merry Christmas Game</title>
 
-        <!-- Version: 1.2.3 -->
+        <!-- Version: 1.2.4 -->
 
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -13,6 +13,7 @@
 	    <meta property="og:title" content="It's the holly-jolly holiday season." />
 	    <meta property="og:description" content="Hope you relax and enjoy the time with family and loved ones. Join us for some fun at Honeywell as well, play the game and catch as many presents as you can with the chimney." />
 	    <meta property="og:image" content="https://honeywell-pf2017.github.io/facebook-image.png" />
+        <meta property="fb:app_id" content="1210522742318191" />
 
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
         <link rel="stylesheet" href="normalize.css">
@@ -30,6 +31,24 @@
     </head>
 
     <body>
+        <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+            appId      : '1210522742318191',
+            xfbml      : true,
+            version    : 'v2.7'
+            });
+            FB.AppEvents.logPageView();
+        };
+
+        (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+        </script>
         <div class="bell" id="bell"></div>
         <div class="corner" id="corner"></div>
         <div class="backdrop backdrop-visible backdrop-white" id="backdrop">
